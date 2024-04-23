@@ -1,0 +1,61 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><link rel="icon" href="data:">
+<title>qrclock</title>
+</head><body>
+<h1>qrclock</h1>
+
+<script type="module" src="https://code4fukui.github.io/qr-code/qr-code.js"></script>
+
+<div id=divc>
+<div id=div>
+<qr-code id=qr dotsize=40></qr-code>
+</div>
+</div>
+
+<footer>
+<a href=https://github.com/code4fukui/qrclock>src on GitHub</a>
+</footer>
+
+<script type="module">
+import { DateTime } from "https://js.sabae.cc/DateTime.js";
+
+class DateTimeQR {
+  static encode(dt) {
+    return "DATE-TIME:" + dt.toString() + ";";
+  }
+};
+
+const show = () => {
+  const dt = new DateTime().toString();
+  console.log(dt);
+  qr.value = DateTimeQR.encode(dt);
+};
+show();
+setInterval(show, 1000);
+
+div.onclick = () => {
+  divc.requestFullscreen();
+};
+</script>
+
+<style>
+body {
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
+qr-code canvas {
+  height: 80vh;
+}
+#div {
+  display: inline-block;
+  text-align: center;
+  background-color: white;
+  x-border-radius: 30px;
+  padding: 5vh;
+  margin: 5vh;
+}
+a {
+  color: white !important;
+}
+</style>

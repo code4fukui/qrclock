@@ -17,17 +17,12 @@
 
 <script type="module">
 import { DateTime } from "https://js.sabae.cc/DateTime.js";
-
-class DateTimeQR {
-  static encode(dt) {
-    return "DATE-TIME:" + dt.toString() + ";";
-  }
-};
+import { DateTimeQR } from "./DateTimeQR.js";
 
 const show = () => {
-  const dt = new DateTime().toString();
-  console.log(dt);
-  qr.value = DateTimeQR.encode(dt);
+  const dt = new DateTime();
+  //qr.value = DateTimeQR.encode(dt);
+  qr.value = dt.toStringSec();
 };
 show();
 setInterval(show, 1000);
@@ -45,7 +40,7 @@ body {
   text-align: center;
 }
 qr-code canvas {
-  height: 80vh;
+  height: 70vh;
 }
 #div {
   display: inline-block;

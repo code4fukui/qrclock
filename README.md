@@ -1,19 +1,25 @@
 # qrclock
-日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
 
-A simple QR clock that displays the current date and time in QR code format.
+A Web/Code project by [Code for FUKUI](https://github.com/code4fukui).
 
-## Demo
-[Live demo](https://code4fukui.github.io/qrclock/)
+**Live demo**: https://code4fukui.github.io/qrclock/
 
-## Features
-- Displays the current date and time in QR code format
-- Automatically updates the QR code every second
-- Fullscreen mode available by clicking on the QR code
+## Technology Stack
 
-## Usage
-1. Clone the repository: `git clone https://github.com/code4fukui/qrclock.git`
-2. Open the `index.html` file in a web browser.
+**Browser modules (ES imports):**
+
+- [`DateTime.js`](https://js.sabae.cc/DateTime.js)
+
+
+## Installation & Setup
+
+No build step required. Clone the repository and open `index.html` in a browser,
+or visit the live demo at https://code4fukui.github.io/qrclock/
+
+## Contributing
+
+Contributions are welcome. Please open an issue or pull request on GitHub.
 
 ## License
-This project is licensed under the [MIT License](LICENSE).
+
+MIT License. See [LICENSE](./LICENSE) for details.

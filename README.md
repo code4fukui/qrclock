@@ -4,7 +4,6 @@
 A simple QR clock that displays the current date and time in QR code format.
 
 ## Demo
-[Live demo](https://code4fukui.github.io/qrclock/)
 
 ## Features
 - Displays the current date and time in QR code format
